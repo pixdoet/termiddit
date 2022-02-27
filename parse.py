@@ -9,7 +9,7 @@ def parse(data):
     for post in postNumber:
         postDate = datetime.utcfromtimestamp(post["data"]["created"])
         print(f"{post['data']['title']} \n")
-        print(f"Link: {post['data']['url_overridden_by_dest']}\n")
+        print(f"Link: {post['data']['url']}\n")
         print(
             f"Posted on {post['data']['subreddit_name_prefixed']} by u/{post['data']['author']} on {postDate} ")
         print("---------------------")

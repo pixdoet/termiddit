@@ -2,13 +2,17 @@ import requests
 import construct
 import json
 
-CONSTRUCTED_URL = construct.constructUrl()
 
 
-def fetch():
+def fetch(override):
     """
     Fetch the data with the constructed URL
     """
+    if override is None:
+        CONSTRUCTED_URL = construct.constructUrl(None)
+    else:
+        CONSTRUCTED_URL = construct.constructUrl(override)
+
     r = requests.get(
         CONSTRUCTED_URL,
         headers={

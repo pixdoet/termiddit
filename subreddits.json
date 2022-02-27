@@ -1,12 +1,8 @@
 {
-    "list": "newsStuff",
     "subreddits": [
+        "unixporn",
         "worldnews",
-        "news",
-        "politics",
-        "pcmasterrace",
         "gaming",
-        "3DS",
-        "science"
+        "pcmasterrace"
     ]
 }
