@@ -1,11 +1,12 @@
+"""
+    Constructs a URL for fetching the data based on subreddits.json
+"""
+
 import json
 
 FEED_URL = "https://reddit.com/r/"
 
 def constructUrl(override):
-    """
-    Construct URL from subreddits.json into reddit format
-    """
     if override is None:
         with open("subreddits.json", 'r') as f:
             data = json.load(f)

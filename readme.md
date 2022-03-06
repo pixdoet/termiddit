@@ -4,6 +4,7 @@ A simple TUI application for reading Reddit in the terminal.
 ## Requirements
 See `requirements.txt` for installation instructions.
 - json
+- requests
 ## Setup and running
 1. Clone the repository into a directory: `git clone https://github.com/pixdoet/termiddit.git`
 2. Make `main.py` executable (if not yet): `chmod +ux main.py`
