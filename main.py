@@ -12,7 +12,7 @@ c = Construct()
 
 
 def main():
-    # argument handling for single subreddit
+    # argument handling for single subreddit (tba)
     """
     try:
         opts, args = getopt.getopt(argv, "r", ["subreddit="])
