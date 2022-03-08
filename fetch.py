@@ -15,7 +15,7 @@ class Construct:
 
     def constructUrl(self, override):
         if override is None:
-            with open("subreddits.json", 'r') as f:
+            with open("subreddits.json", "r") as f:
                 data = json.load(f)
 
             url = FEED_URL
@@ -28,19 +28,21 @@ class Construct:
             # custom subreddit feed
             url = f"{FEED_URL}{override}.json"
             return url
-    
+
     def postListName(self):
-        with open("subreddits.json", 'r') as f:
+        with open("subreddits.json", "r") as f:
             data = json.load(f)
-        
+
         return data["name"]
 
 
 construct = Construct()
 
+
 class Fetch:
     def __init__(self):
         pass
+
     def fetch(self, override):
 
         if override is None:
@@ -53,9 +55,7 @@ class Fetch:
             headers={
                 "Accept": "application/json",
                 # usefirefox
-                "User-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:100.0) Gecko/20100101 Firefox/100.0"
-            }
+                "User-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:100.0) Gecko/20100101 Firefox/100.0",
+            },
         )
         return r.json()
-    
-    

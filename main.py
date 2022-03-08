@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-import sys
-
+# import sys
 
 from parse import Parse
 from fetch import Fetch, Construct
@@ -11,9 +10,11 @@ f = Fetch()
 p = Parse()
 c = Construct()
 
-def main(argv):
+
+def main():
     # argument handling for single subreddit
-    """try:
+    """
+    try:
         opts, args = getopt.getopt(argv, "r", ["subreddit="])
     except getopt.GetoptError:
         FETCHED_DATA = fetch.fetch(None)
@@ -21,7 +22,8 @@ def main(argv):
 
     for opt, arg in opts:
         if opt == "-r":
-            FETCHED_DATA = fetch.fetch(arg)"""
+            FETCHED_DATA = fetch.fetch(arg)
+    """
 
     FETCHED_DATA = f.fetch(None)
     FETCHED_POSTS_NO = c.postListName()
@@ -29,4 +31,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()
