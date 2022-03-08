@@ -2,12 +2,14 @@
 
 import sys
 
+
 from parse import Parse
-from fetch import Fetch
+from fetch import Fetch, Construct
 
 
 f = Fetch()
 p = Parse()
+c = Construct()
 
 def main(argv):
     # argument handling for single subreddit
@@ -22,7 +24,8 @@ def main(argv):
             FETCHED_DATA = fetch.fetch(arg)"""
 
     FETCHED_DATA = f.fetch(None)
-    p.parse(FETCHED_DATA)
+    FETCHED_POSTS_NO = c.postListName()
+    p.parse(FETCHED_DATA, FETCHED_POSTS_NO)
 
 
 if __name__ == "__main__":

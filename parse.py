@@ -20,7 +20,7 @@ class Parse:
     def __init__(self):
         pass
 
-    def parse(data):
+    def parse(self, data, listName):
         """
         Parse the data coming from fetch.py
         """
@@ -34,4 +34,4 @@ class Parse:
                 f"Posted on {colours.PURPLE}{post['data']['subreddit_name_prefixed']}{colours.STOP} by {colours.BLUE}u/{post['data']['author']}{colours.STOP} on {postDate}")
             print("---------------------")
 
-        print(f"{len(postNumber)} posts shown.")
+        print(f"Fetch {len(postNumber)} posts from list \"{listName}\".")
