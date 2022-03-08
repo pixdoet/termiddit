@@ -2,9 +2,12 @@
 
 import sys
 
-import parse
-import fetch
+from parse import Parse
+from fetch import Fetch
 
+
+f = Fetch()
+p = Parse()
 
 def main(argv):
     # argument handling for single subreddit
@@ -18,8 +21,8 @@ def main(argv):
         if opt == "-r":
             FETCHED_DATA = fetch.fetch(arg)"""
 
-    FETCHED_DATA = fetch.fetch(None)
-    parse.parse(FETCHED_DATA)
+    FETCHED_DATA = f.fetch(None)
+    p.parse(FETCHED_DATA)
 
 
 if __name__ == "__main__":

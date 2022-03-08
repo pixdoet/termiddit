@@ -1,5 +1,8 @@
 {
     "subreddits": [
-        "all"
+        "python",
+        "javascript",
+        "csharp",
+        "programming"
     ]
 }

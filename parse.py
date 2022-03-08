@@ -2,7 +2,9 @@
 from datetime import datetime
 
 # colour palette for printing bri'ish text
-class bcolors:
+
+
+class PrintColours:
     PURPLE = '\033[95m'
     BLUE = '\033[94m'
     CYAN = '\033[96m'
@@ -12,20 +14,24 @@ class bcolors:
     UNDERLINE = '\033[4m'
     STOP = '\033[0m'
 
+colours = PrintColours()
 
-def parse(data):
-    """
-    Parse the data coming from fetch.py
-    """
-    postNumber = data["data"]["children"]
-    for post in postNumber:
-        postDate = datetime.utcfromtimestamp(post["data"]["created"])
-        print(f"{bcolors.YELLOW}{post['data']['title']}{bcolors.STOP} \n")
-        print(f"Link: {bcolors.UNDERLINE}{post['data']['url']}{bcolors.STOP}\n")
-        print(
-            f"Posted on {bcolors.PURPLE}{post['data']['subreddit_name_prefixed']}{bcolors.STOP} by {bcolors.BLUE}u/{post['data']['author']}{bcolors.STOP} on {postDate}")
-        print("---------------------")
+class Parse:
+    def __init__(self):
+        pass
 
-    print(f"{len(postNumber)} posts shown.")
+    def parse(data):
+        """
+        Parse the data coming from fetch.py
+        """
+        postNumber = data["data"]["children"]
+        for post in postNumber:
+            postDate = datetime.utcfromtimestamp(post["data"]["created"])
+            print(f"{colours.YELLOW}{post['data']['title']}{colours.STOP} \n")
+            print(
+                f"Link: {colours.UNDERLINE}{post['data']['url']}{colours.STOP}\n")
+            print(
+                f"Posted on {colours.PURPLE}{post['data']['subreddit_name_prefixed']}{colours.STOP} by {colours.BLUE}u/{post['data']['author']}{colours.STOP} on {postDate}")
+            print("---------------------")
 
-
+        print(f"{len(postNumber)} posts shown.")
