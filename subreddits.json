@@ -4,6 +4,7 @@
         "python",
         "javascript",
         "csharp",
-        "programming"
+        "programming",
+	"all"
     ]
 }

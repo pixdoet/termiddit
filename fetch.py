@@ -1,12 +1,14 @@
 """
     Fetch the data with the constructed URL
+
+    @author Ian Hiew(pixdo.et@gmail.com)
 """
 
 import requests
 import json
 
 
-FEED_URL = "https://reddit.com/r/"
+FEED_URL = "https://old.reddit.com/r/"
 
 
 class Construct:
