@@ -1,10 +1,11 @@
 {
-    "name": "Feed 1",
+    "name": "Ian's feed",
     "subreddits": [
-        "python",
-        "javascript",
-        "csharp",
-        "programming",
-	"all"
+        "linux",
+        "malaysia",
+        "news",
+        "worldnews",
+        "gaming",
+	"ipod"
     ]
 }
