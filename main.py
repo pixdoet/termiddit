@@ -39,7 +39,7 @@ def main(argv):
                 if opt == "-s":
                     data = f.fetch(arg, None)
                     p.parse(data, "custom feed")
-                elif opt == "-u":
+                elif opt == "-l":
                     data = f.fetch(None, arg)
                     p.parse(data, )
 
@@ -47,7 +47,7 @@ def main(argv):
                     print(
                         """Usage: main.py [-s <subreddit(s)>] [-u <json file>] [-h]
                     -s: Request with subreddits. Create a multireddit by adding the plus symbol (+) between different subreddits. E.g.: python+php+java. This option overrides the subreddits.json file.
-                    -u: Request with a custom JSON feed. This should take only one argument, the path of the JSON feed file.
+                    -l: Request with a custom JSON feed. This should take only one argument, the path of the JSON feed file.
                     -h: Print this help message.
                     """
                     )

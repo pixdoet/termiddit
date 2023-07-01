@@ -11,5 +11,10 @@ See `requirements.txt` for installation instructions.
 3. (Optional) Edit `subreddits.json` to match your subreddit selections. View the guidelines at [json.md](/docs/json.md)
 4. Launch termiddit with `./main.py`!
 
+## Options
+- `-s <subreddit>` view a single subreddit. Multireddit feature broken rn.
+- `-l <json file>`: use a custom JSON feed.
+- `-h`: print help
+
 ## License
 Apache 2.0
